@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="video" class="modal">
+		<div class="player" data-auto-play="true">
+			<div class="video">
+				<video class="play">
+				 	<source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+					<source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm">
+						<source id="ogv" src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg">
+				  	Callback vídeo html5
+				</video>
+			</div>
+			<div class="controls">
+				<div class="play"><span class="play"></span></div>
+				<div class="progresso">
+					<div class="dragger">
+						<span class="track" id="sliderTrack"></span>
+						<span class="track" id="bg"></span>
+						<span class="track" id="progress"></span>
+						<span class="track" id="tracker"></span>
+						<span class="slider"></span>								
+					</div>
+				</div>
+				<p class="time">00:00 | 00:00</p>
+				<div class="volume">
+					<span class="on"></span>
+					<div class="dragger">
+						<span class="track" id="sliderTrack"></span>
+						<span class="track" id="bg"></span>
+						<span class="track" id="progress"></span>
+						<span class="track" id="tracker"></span>
+						<span class="slider"></span>								
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div><!-- player -->
+	</div><!-- modal -->
+	<script src="http://code.jquery.com/jquery-1.11.2.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	
+	<script src="videoPlayer.js"></script>
+	<script type="text/javascript">
+		this.videoPlayer.init($(".player"));
+	</script>
+</body>
+</html>
