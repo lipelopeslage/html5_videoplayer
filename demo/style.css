@@ -6,7 +6,10 @@
 .iosfix {
   height: 101%; overflow: hidden;
 }
-
+	
+	body{
+		width: 50%;
+	}
 
 	body * {
 		font-family: Helvetica;
