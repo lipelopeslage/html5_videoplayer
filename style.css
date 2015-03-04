@@ -1,0 +1,210 @@
+
+.clear{
+	clear: both; height: 0; width: 0;
+}
+
+.iosfix {
+  height: 101%; overflow: hidden;
+}
+
+
+	body * {
+		font-family: Helvetica;
+		font-size: 11px;
+		font-weight: 100;
+	}	
+
+	body a {
+		text-decoration: none;
+	}	
+
+/*
+#####################
+	VÍDEO PLAYER
+#####################
+*/
+	
+	div.player{
+		display: block;
+		position: relative;
+	}
+	div.player>div.video{
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+
+		div.player>div.video>video{
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+	div.player>div.controls{
+		display: block;
+		position: absolute;
+		padding-top: 10px;
+		width: 100%;
+		height: 33px;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		background: url(../images/assets/bg_player_controls.png);
+	}
+
+		div.player>div.controls>*{
+			display: block;
+			position: relative;
+			float: left;
+		}
+
+		div.player>div.controls>div.play{
+			width: 7%;
+			height: 100%;
+		}
+
+			div.player>div.controls>div.play>span{
+				display: block;
+				position: relative;
+				margin-left: 13px;
+				width: 25px;
+				height: 25px;
+				cursor: pointer;
+			}
+
+				div.player>div.controls>div.play>span:before{
+					text-align: center;
+					color: white;
+					font-size: 20px;
+				}
+
+				div.player>div.controls>div.play>span.play:before{
+					display: block;
+					position: relative;
+					content: "";
+					width: 0;
+					height: 0;
+					left: 10px;
+					border-style: solid;
+					border-width: 10px 0 10px 15px;
+					border-color: transparent transparent transparent white;				
+				}
+
+
+				div.player>div.controls>div.play>span.pause:before{
+					display: block;
+					position: relative;
+					content: "| |";
+				}
+
+		div.player>div.controls>div.progresso{
+			width: 58%;
+			height: 100%;
+		}
+
+			div.player>div.controls div.dragger{
+				display: block;
+				position: absolute;
+				top: 3px;
+				left: 0;
+				width: 100%;
+				height: 20px;
+				z-index: 5;
+			}
+
+				div.player>div.controls div.dragger>span.track{
+					display: block;
+					position: absolute;
+					top: 8px;
+					width: 100%;
+					height: 2px;
+				}
+
+					div.player>div.controls div.dragger>span.slider{
+						display: block;
+						position: absolute;
+						margin-left: -4px;
+						top: 5px;
+						left: 0;
+						width: 8px;
+						height: 8px;
+						background-color: #FFF;
+						cursor: pointer;
+					}
+
+						div.player>div.controls div.dragger:hover>span.slider{
+							opacity: .5;
+						}
+
+					div.player>div.controls div.dragger>span.track#bg{
+						background-color: #4e4e4e;
+					}
+
+					div.player>div.controls div.dragger>span.track#progress{
+						width: 0;
+						background-color: #c00c0b;
+					}
+
+					div.player>div.controls div.dragger>span.track#tracker{
+						top: 4px;
+						width: 100%;
+						height: 10px;
+					}
+
+		div.player>div.controls>p.time{
+			color: white;
+			font-weight: bold;
+			text-align: center;
+			width: 13%;
+			margin: 0;
+			font-size: 12px;
+			line-height: 22px;
+			padding: 0;
+		}
+
+		div.player>div.controls>p.time{
+			font-size: 11px;
+			line-height: 25px;
+		}
+
+		div.player>div.controls>div.volume{
+			width: 22%;
+			height: 100%;
+		}
+
+			div.player>div.controls>div.volume>span{
+				display: block;
+				position: relative;
+				width: 25px;
+				height: 25px;
+				cursor: pointer;
+				background: url('../images/assets/player_asset.png') no-repeat;
+			}
+
+				div.player>div.controls>div.volume>span.on{
+					background-position: -33px -1px;
+				}
+
+				div.player>div.controls>div.volume>span.off{
+					background-position: -33px -32px;
+					opacity: .7;
+				}
+
+
+
+			div.player>div.controls>div.volume div.dragger{
+				left: auto;
+				left: 35px;
+				width: 64%;
+			}
+
+			div.player>div.controls>div.volume>div.dragger>span.track#progress{
+				width: 100%;
+			}
+
+			div.player>div.controls>div.volume>div.dragger>span.slider{
+				left: auto;
+				right: -4px;
+			}
